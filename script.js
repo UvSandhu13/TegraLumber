@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.addEventListener('click', () => {
-            alert('Welcome to Tegra Lumber!');
+    const heroButton = document.querySelector('.hero .btn');
+    if (heroButton) {
+        heroButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            const contactSection = document.querySelector('#contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
         });
     }
 });
